@@ -28,13 +28,19 @@ dependencyManagement {
 	}
 }
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-web")
+//	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+//	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("io.projectreactor:reactor-test")
+
 	implementation("io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter")
 	implementation("com.h2database:h2")
+
+	implementation("io.opentelemetry.instrumentation:opentelemetry-spring-webflux-5.3")
+
 
 }
 
